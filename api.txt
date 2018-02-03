@@ -1,0 +1,44 @@
+API Design
+/babygothack/api/v1
+
+
+Pages:
+/Login
+  GET - which gets the login Page
+  POST - which sends the username/password for verification
+
+/Register
+  GET - gets register user page
+  POST - Register new users
+
+/Home 
+/Home/Users/{userid}
+  GET - gets home page for user by their userid
+/Home/{userid}/news/{newsid}
+
+/Go
+
+
+GET interests 
+  - 200, 304
+GET /users?state=mentor
+GET /users/$ID?state=mentor
+
+Green for Go: 
+#daily change
+  -   
+
+
+GET 
+POST
+PUT
+DELETE
+
+/users/occupations
+/users/interests
+/users/educations/degrees
+/users/companies
+
+
+auth/logi
+
