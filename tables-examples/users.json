@@ -1,0 +1,39 @@
+{
+    TableName : "Users",
+    KeySchema: [       
+        { 
+            AttributeName: "ID", 
+            KeyType: "HASH", //Partition key
+        }
+    ],
+    AttributeDefinitions: [
+        { 
+            AttributeName: "ID", 
+            AttributeType: "S" 
+        },
+        { 
+            AttributeName: "Name", 
+            AttributeType: "S" 
+        },
+        { 
+            AttributeName: "Occupation", 
+            AttributeType: "NS" 
+        }, 
+        { 
+            AttributeName: "Company", 
+            AttributeType: "N" 
+        },
+        { 
+            AttributeName: "Education", 
+            AttributeType: "N" 
+        }, 
+        { 
+            AttributeName: "Interest", 
+            AttributeType: "NS" 
+        }         
+    ],
+    ProvisionedThroughput: {       
+        ReadCapacityUnits: 1, 
+        WriteCapacityUnits: 1
+    }
+}

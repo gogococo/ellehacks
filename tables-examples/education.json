@@ -1,0 +1,27 @@
+{
+    TableName : "Occupations",
+    KeySchema: [       
+        { 
+            AttributeName: "CurrentPosition", 
+            KeyType: "RANGE", //Partition key
+        }
+    ],
+    AttributeDefinitions: [
+        { 
+            AttributeName: "CurrentPosition", 
+            AttributeType: "NS" 
+        },
+        { 
+            AttributeName: "Name", 
+            AttributeType: "S" 
+        },
+        { 
+            AttributeName: "", 
+            AttributeType: "S" 
+        },        
+    ],
+    ProvisionedThroughput: {       
+        ReadCapacityUnits: 1, 
+        WriteCapacityUnits: 1
+    }
+}
